@@ -1,0 +1,29 @@
+{
+  "name": "Weather",
+  "short_name": "Weather",
+  "icons": [{
+    "src": "https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Common-dog-behaviors-explained.jpg?itok=FSzwbBoi",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "images/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
+}
