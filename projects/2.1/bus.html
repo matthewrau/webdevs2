@@ -1,0 +1,146 @@
+<html>
+
+<head>
+  <!-- Material Design Lite -->
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+  <!-- Simple header with fixed tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+      </div>
+      <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+        <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Make Predictions</a>
+        <a href="#fixed-tab-2" class="mdl-layout__tab">Call </a>
+        <a href="#fixed-tab-3" class="mdl-layout__tab">Add Routes</a>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+    </div>
+    <main class="mdl-layout__content">
+      <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+        <div class="page-content">
+
+          <select id="route"></select>
+          <script>
+            var routeIds = ["10", "27", "48", "124", "200x"];
+
+
+            $.each(routeIds, function(i, v) {
+              var option = $("<option>");
+              option.attr("value", v);
+              option.text(v);
+              $("#route").append(option);
+            });
+
+            $("#route").on("change", function() {
+              // get the value
+              var routeId = $("#route").val() + $("#rtdir").val() + $("#stpid").va;
+              // use that value to get the directions for that route
+              alert(routeId);
+            })
+          </script>
+
+        </div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+        <div class="page-content">
+          <!-- Your content goes here -->
+        </div>
+      </section>
+      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+        <div class="page-content">
+
+         
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+
+
+
+<script>
+  $(function() {
+    $('#link1').on('click', function() {
+      $('.screen').hide()
+      $('#screen1').show();
+    })
+
+    $('#link2').on('click', function() {
+      $('.screen').hide()
+      $('#screen2').show();
+    })
+
+    $('#link3').on('click', function() {
+      $('.screen').hide()
+      $('#screen3').show();
+    })
+  })
+
+  $(function() {
+
+
+        var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+
+        var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getpredictions";
+
+        $.ajax({
+            url: apiPassThruUrl,
+            dataType: "json",
+            method: 'GET',
+            data: {
+              "apiEndpoint": apiEndpoint,
+              "key": "MiXUbBVCzukPsxAmBgEgMLyZy",
+              "format": "json",
+              "rt": "ALL",
+              "stpid": "ALL",
+
+
+            }).done(function(data) {
+            console.log(data);
+            $("body").append("#select");
+
+            $.each(data["bustime-response"]["prd"], function(i, v) {
+
+              $(document).ready(function() {
+                $('option').add(<option value="rt">'rtnm' </option>)
+              })
+
+
+
+
+
+
+              $("#" + v.rtdir).append();
+
+            });
+
+          });
+        });
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Find My Bus</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<style>
+ p, h1 {font-family: helvetica;}
+            p {color:Black;}
+            p {font-size:1.0em; line-height:1em; margin-left: 4px;}
+            pre {font-size: 2em;}
+
+
+div {
+                background-color: #ADD8E6;                                                          
+                border: 10px solid black; 
+                border-radius: 6px;
+                min-height:50px;
+                padding:10px;
+                color:black;
+            }
+            
+       
+
+
+</style>
+
+<link rel="manifest" href="./manifest.json">
+
+<!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+
+</head>
+<body>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+      
+        $(function() {
+          
+          
+          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+          
+          var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getpredictions";
+          
+  
+          $.ajax({
+              url: apiPassThruUrl,
+              dataType: "json",
+              method: 'GET',
+              data: {"apiEndpoint": apiEndpoint,
+                      "key" : "MiXUbBVCzukPsxAmBgEgMLyZy",
+                      "format":"json", "rt": "152,49,49X", "stpid": "12569,8417,8195,12527" }
+            }).done (function (data) {
+              console.log(data);
+              $("body").append("<h1>Bus Routes Around Lane Tech</h1>");
+             
+              $.each(data["bustime-response"]["prd"], function(i,v) {
+                  //$("body").append("Route #" + v.rt + ", " + v.rtnm + "<br>");
+                  
+                  var html = "<div><h2>Route #" + v.rt + " " + v.rtdir
+                    + "<br>"
+                    + "</h2>"
+                    + "<p>" 
+                    + "End Destination: "
+                    + v.des
+                     + "<br>"
+                     + "Stop: "
+                     + v.stpnm
+                    + "<br>"
+                    + "Time Until Arrival: "
+                    + v.prdctdn
+                    + "<br>"
+                    + "Prediction made at: "
+                    + v.tmstmp
+                    
+                    
+                   + "</p></div>";                                   
+                 
+  
+  
+
+                 
+                 
+                  $('body').append(
+                  +'<div id="Eastbound"></div>'
+                  +'<div id="Westbound"></div>'
+                  +'<div id="Northbound"></div>'
+                  +'<div id="Southbound"></div>');
+                  
+                  
+                  
+                    $("#" + v.rtdir).append(html);
+                
+              });
+
+            });
+        });
+            
+  
+</script>
+ 
+</body>
+</html>

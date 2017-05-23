@@ -1,0 +1,211 @@
+<html>
+
+<head>
+  <!-- Material Design Lite -->
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .screen {
+      display: none;
+    }
+    link2 {
+       border-collapse: separate;
+    border-spacing: 10px;
+}
+    
+  </style>
+
+</head>
+
+<body>
+  <!-- Simple header with fixed tabs. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Tabs</span>
+      </div>
+      <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+        <a id='link1' href='#screen1' class="mdl-layout__tab is-active">Search and Display</a>
+        <a id='link2' href='#screen2' class="mdl-layout__tab">Add Employee</a>
+        <a id='link3' href='#screen3' class="mdl-layout__tab">About</a>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Header</span>
+    </div>
+    <main class="mdl-layout__content">
+      <div id='screen1' class="page-content screen">
+
+
+
+        <a href="https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w">Chicago Employee Database</a>
+        <p>Search Employee Database.
+
+        </p>
+
+
+        <!-- Textfield with Floating Label -->
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="search">
+          <label class="mdl-textfield__label" for="search">Text...</label>
+          <button id="btnSearch">Search</button>
+        </div>
+        <div id="results">
+
+        </div>
+
+
+
+      </div>
+      <div id='screen2' class="page-content screen">
+        <!-- Textfield with Floating Label -->
+
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <label id="label1">Name (Last, First)</label>         
+          <input class="mdl-textfield__input" type="Last, First" id="nme">
+          <label1 class="mdl-textfield__label" for="nme"></label1>
+          
+          
+          <label id="label2">Title</label>
+          <input class="mdl-textfield__input" type="Last, First" id="tit">
+          <label2 class="mdl-textfield__label" for="tit"></label2>
+          
+          <label id="label3">Department</label>
+          <input class="mdl-textfield__input" type="Last, First" id="Depo">
+          <label3 class="mdl-textfield__label" for="Depo"></label3>
+          
+          
+          <label id="label4">Salary</label>
+          <input class="mdl-textfield__input" type="Last, First" id="pay">
+          <label4 class="mdl-textfield__label" for="pay"></label4>
+          
+          
+          <button id="btnAdd">Add</button>
+        </div>
+        <div id="final">
+
+
+
+
+      </div>
+      
+      
+      <div id='screen3' class="page-content screen"></div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script>
+      $(function() {
+        $('#link1').on('click', function() {
+          $('.screen').hide();
+          $('#screen1').show();
+        })
+
+        $('#link2').on('click', function() {
+          $('.screen').hide();
+          $('#screen2').show();
+        })
+
+        $('#link3').on('click', function() {
+          $('.screen').hide();
+          $('#screen3').show();
+        })
+      })
+
+      /*
+        ajax stuff to load initial data
+      
+      */
+      var db = new Dexie("employeeDB");
+      db.version(1).stores({
+        employees: '++id,name,department,title,salary'
+      })
+
+      db.employees.count().then(function(count) {
+        console.log(count);
+
+        if (count == 0) {
+
+          $.ajax({
+              url: 'https://data.cityofchicago.org/resource/tt4n-kn4t.json',
+              data: {
+                department: 'CITY COUNCIL'
+              }
+            })
+            .done(function(data) {
+              console.log(data)
+
+
+
+
+              $.each(data, function(i, v) {
+                db.employees.add({
+                  name: v.name,
+                  title: v.job_titles,
+                  salary: v.employee_annual_salary,
+                  department: v.department
+                });
+
+              });
+
+            })
+
+
+
+        }
+
+      });
+    </script>
+
+    <script>
+      $("#btnSearch").on("click", function() {
+        $("#results").html("");
+        console.log($("#search").val());
+
+        var searchTerm = $("#search").val();
+
+
+        db.employees
+          .where('name')
+          .startsWithIgnoreCase(searchTerm)
+          .each(function(emp) {
+            $("#results").append(emp.name + "<br>" +
+              "Title: " + emp.title + "<br>" +
+              "Department: " + emp.department + "<br>" +
+              "Salary: " + emp.salary + "<br>" +
+              "<br>"
+
+            );
+          });
+      });
+    </script>
+
+    <script>
+    $("#btnAdd").on("click", function() {
+      $("screen2").append("db.employees");
+      console.log("db.employees");
+      
+      var addEmp = $("#term").val();
+    });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

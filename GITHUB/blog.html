@@ -1,0 +1,176 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MDL-Static Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo"></div>
+                    <span class="mdl-layout__title">Matthew Rau's Portfolio Website</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Featured</a>
+                    <a class="mdl-navigation__link  is-active" href="blog.html">Portfolio</a>
+                    <a class="mdl-navigation__link" href="about.html"> About Me</a>
+                    <a class="mdl-navigation__link" href="contact.html">Contact Me</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
+                <a class="mdl-navigation__link" href="blog.html">New Projects</a>
+                <a class="mdl-navigation__link" href="about.html">About Me</a>
+                <a class="mdl-navigation__link" href="contact.html">Contact Me</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
+                        <img class="article-image" src=" https://assets-cdn.github.com/images/modules/open_graph/github-logo.png" border="0" alt="">
+                    </div>
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <h2 class="mdl-card__title-text">Link to my Github Portfolio</h2>
+                        <div class="mdl-card__supporting-text padding-top">
+                            <span>Posted 2 days ago</span>
+                            <div id="tt1" class=" icon material-icons portfolio-share-btn">share</div>
+                            <div class="mdl-tooltip" for="tt1">
+                                Share via social media
+                            </div>
+                        </div>
+                        <div class="mdl-card__supporting-text no-left-padding">
+                            <p>Here is my newly created github.com portfolio. If you want to view my works in progress you can click on the link bellow or on some of the other cards on this page. Have Fun!</p>
+                            <span>Go Here To My <a href="https://github.com/matthewrau/webdevs2">Portfolio</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">CPS School Finder</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <a href="#"> <img class="article-image" src=" http://campaignopposingpolicesurveillance.com/wp-content/uploads/2014/09/cpslogo.png" border="0" alt=""></a>
+                    </div>
+                    <div class="mdl-card__supporting-text no-bottom-padding">
+                        <span>Posted 2 days ago</span>
+                        <div id="tt2" class=" icon material-icons portfolio-share-btn">share</div>
+                        <div class="mdl-tooltip" for="tt2">
+                            Share via social media
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>This is one of my favorite projects as you have probably seen on the featured page. This project gave me a great understanding of how to use filters and is a building block for my coding career. <a href="https://preview.c9users.io/mrrau/webdev1617/JSON12/project.html">Click Here to View</a>  </p>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-card mdl-card mdl-shadow--4dp portfolio-blog-card-full-bg  ">
+                    <div class="mdl-card__title mdl-card--expand "></div>
+                    <div class="mdl-card__actions">
+                        <span class="demo-card-image__filename">Fun Image</span>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp ">
+                    <div class="mdl-card__media">
+                        <a href="#"> <img class="article-image" src=" data:image/jpeg;base64,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" border="0" alt=""></a>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <small>Blow Horn.</small>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p> This is my very first noise making and mobile application. With this app you can walk around the hallways and blow off a horn to prank a security guard or annoy your teachers.   <a href="https://preview.c9users.io/mrrau/webdevs2/labs/8/index.html">Noise Machine</a>            </p>
+                    </div>
+                </div>
+                <div class="demo-card-event mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-card mdl-card mdl-shadow--4dp portfolio-blog-card-event-bg mdl-color-text--white">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h4 class="mdl-color-text--white">
+                          Last Updated:<br>
+                          March 14, 2017<br>
+                          11pm
+                        </h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+                          Add to Calendar
+                        </a>
+                        <div class="mdl-layout-spacer"></div>
+                        <i class="material-icons ">event</i>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet mdl-card  mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title mdl-card--expand portfolio-blog-card-strip-bg mdl-color-text--white">
+                        <h2 class="mdl-card__title-text">Schedule</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        View my 2016/2017 school schedule.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                        <a href="https://preview.c9users.io/mrrau/webdev1617/aboutme_v3.html">View</a>  
+                        </a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-card  mdl-card mdl-shadow--4dp portfolio-blog-card-compact">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEBUTExMVFhUVFxcXGBUWFRcVGBUXFhUXFxUVFRUdHSggGBolHRUVITEhJSorLi4uFx8zODMtNygtLisBCgoKDQ0NFxAPGi0dHR0tLS0tLS0rLS0tLS0tLS0tLS0tLS0rLSstLS0rLS4tLS0tLS0tLTctLS0tLS0tLSsuL//AABEIAI8BYAMBIgACEQEDEQH/xAAbAAAABwEAAAAAAAAAAAAAAAAAAQIDBAUGB//EAEMQAAIBAwEFBQUGBQIEBgMAAAECAwAEERIFITFBUQYTYXGRIjJCgaEHFFJicrEjgpLB0aLwJDNjshUWQ8LS8VNz4f/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACIRAQADAAEEAwADAAAAAAAAAAABAhEDBCExQRIiYRMj0f/aAAwDAQACEQMRAD8A6Iq04BQAo6zjQUKFGKAYoUdCgGKOjFOxx0CETNSUjxSCDyFPpVxBb6ME9KNjSRQHq8KPVQGaXigTqFHkUDSd3SgVSTCvSj0ij0edAgQKDnFOikaPE0ek9fpQKpMiE8Dij3+FDJ6D1oGu6b8VDTJ1Bp3Ueh+lDX4H0oG4y+d+MU/Se9H+wRQ7wdR60BucDNR2lDDDL8qkg0dBCZo8cD06UcMKHgT5dMVKKg8qMLjhTAFGOFCjoVQVMzFmHsMu/nnO/oP9/wCaclj1Ag5wen7VBl2UpyFYqCunGAQPHl/vpQGqXGPfU9Nw4Dru49fLcN+A2Z7kDfGh4cDnzbGfp++N7lrs4q2TIdO/2QSAd+7PTA3YHjv5VYUEG3uZWYAx6RzLbt27hv4np51No6FTAKKjpEj4GcE+A51QbOB/im/vC+Plg59KaNxnin9seGcUayLgez6YwPnUChcqccd/++PCjMi9RTRdM8Du/wB4GDTndqw3Z+WRQVYo6FGKihRihR0QKMCjVM0+q4pgKOKngaND4VHvNoRxD2mA8zVEkMKM1Vx3srONMYKH4s/2q0C1QRWjVaGihp8aBYFEzUkN0INHv6UAJzQoavA0YcVMBgUeKJpVAJLAAcSSAB5mq2PtHaM2kXEZPD3t39XD61qImfCTMR5WFxMqKWYhVAySeArJ2cd3dzl+/ZLMe6oQI8v83EJ6E/vbz7HeebVOwMSkFIVzpJ/FIfi8Bwq6VcbhUUmOMKABwFKo6FAKFESAMncBzNZ7/wA4QSO0VqrXUi7mERXQp/NKxC/IZPhQPX3aeNXaKGOS5lX3o4AG0HpJIxCId/AnPhVV2d7c/eb17J7OaGVFLNqKOFxjc5U7s5GOOalrZbQkBXVb2UZJJEC9/Mc89bBURvHS1WewtgwWiFYlOXOp5HJeSRvxO53k/QUFgYl6D0FF3K9MeRI/Y05QohvuuhYfzE/vmi7o/jb5hP8A407SJywUlV1NjcpOkE8gWwceeDRSCj8nX5oT+zCgRL/0z/Uv/wAq5xfbQaQyG/2zFa6SV+6WEqd4uOTPgyO/D2Qopv7MtlbQ+8tPJNdCzBcIly7l5wdyExsToHPO7woOla5OaL8pCf3QUO/bnFJ8jGf/AH1INCgj/eRzWQfyMf8AtBo/vScyR+pWX9xT9DNAyLlD8a/1D/NOqc8N/lRmm2gU8UX+kUC8UKrU2laGTulnh7zh3ayrrz00g5qf3Xi39R/vQLoiKToP4j9D/ahpb8Q9KAGMdBSgMUn2vD6ihlug9f8A+UFRRigKMCsqApyOPNLji5mn0YcquIJFApwCiIFMrOhOAwJ8KoTtCcohKqWPQcapo7X7wvtwkZ46+NXplXONYz0zTgJoG7O2EahRyqRSNXhRhxQKqHdXCHKY1k8h/c8qduoS4wH0jnjiaVbWyoMKKDP2/ZGMTCXVImN/dpIwUn8wzvrSqMDFHRgUAFBiBvPCmL+8SGNpJGCooySeQFZ3aczXdozGZbaFxkPuLleR37hnpvoM/wDaXcNIqvCJZI4wdYRDo/Xq4NjhzrJ3NndrbR3CRFoGAcOq+7nm6EavmQRXSey9hPPB/wAW5aMMRGgURB4x7rSKN+/oTjwrWIgAwAABuwOGOlda8s1jHK3FW065n2d+0rKhbhSTyePGT0yh3enpWjftrGhHeRyx5/Eq5x1Kg5xWO7X/AGe3RvHntQrxyHVoBWMxnmMHAI55qy7PfZ5LkPduoxv7tTqJ8GbgB5ZrecWbLnvLE5DokMupQy4KsAQd4yDwpeo/hPyIqn2p2gS1KRujF3ysSR6T3hAyFUEjG4cTgeNZ7tVtjaUNo91rtLdVGViZWnkck4VNeQus9FB386870NlfW8c0bRypqRhhlZSQR0OOVZe5+zjZLnPcBDyMcskePIBqu+yVzcyWcUl2qpOwyyqMYBJ05GThtOMjrVxRUbZ1nHDEscQwijAGSfUneT4mpNIMCn4R6Ck/dx+YeTsPpnFA5R4pnuG5SN8wh/8Abn60CknJkPmhH1Df2oKTt7tuWzsXmgiMkmQq+yWVNRx3jgfCONY7st9psZtAtybi5ujqzFFbZyOAVdAC4xzO/fXRrm8aNS0gjCj4u9x/3KB9ar7LtRbSPpQnUTjdoOfLSxzV+Mz4SbRHljew3YuX7+doSwrZIM9zaR7jgjGZANyjnp5nkMb+n1H++Jz1j9Ubr9StKS6jPB0Pkw/aop3FDFHQoCpm8ukiRpJXVEUZZ2IVQOpJ4U/VVt/s9b3iBLlC6g5CiSRBnr7DDJoIEXaZrgf8DD3y/wD55G7qDcd+Nxkk/lXBxxFYPthtO4uZPuME8lzcMcOIP4FtABxzglnPXUxHhncYu3Ps7LXqw2NrNBH/AOpcySsyH9ILFv8ANbrsd9n8NhI0iTTSMwAwxCr4+yuA3zzip3CuwnYSHZ6Bjh7gj2pMbl6rGPhX6mtbR0MVYgFRUZoqAUMUdEaIqETNSoocUuNAKN92/OKmKDJmgqAVXJt23MndiZC2cYB59KsW3jeK1MTHlImJ8IF5dasqvDm3+KYaGOGP2VyT04k1LvLFJEKZK55ruPrSdn7ISMAamfHNjk1FRbbYyvIszrhhw8Ku1FGBTF5daFzgk8gBmga2rtJIE1uGI6KNRPgAONKsLoyLqKFFPDVx+Y5VXXEUukyshkcDKxggAevOs7bdppbl+4+7TpJnDHT/AA4x+sbjQa1trQd73IcNJ+Fd5A6nHD51PCeJqBsXYsVupCKNTb2bmx6k1Z0CMHrQyenoaiba2h3ELSez7I3Bm0gnkM4O81T7F2rdSJ94u1S2i+GIEs7dCxIGM8lAz+1BdbQtIp42imTUjDBVhkEVW7K7J2MBBihQEe7qJfT+kMTp+VRdpbZ2grarewWWLHOdUlPkhGB8zV5sq4kliV5YTCx4xsyuV8yN1BNoUjux5eW6ksp5MfoaBbPisp237bR7PiV2Vm1NpCrgEnid53CtE8Tnmp+RH+apNqbYtIjomCu3NFAkx+ocAfOsXvWkbach04uK/Lb48dZtP45vdSffr1byzubiSfSFWKKIMI8jeHlf+HGu/fnJ3bs1u+zHY2UOtztGc3Nwu9EOO5t//wBaAAF/zYHhV5sfbNvJ7EYKYGrSU0+z13bhVskingQfIg1aWraNrOpycd+O3xvGSXQoUK0wFChWQ7bdrZLcrbWkLzXcu5AEYomfiZuBPPTnxJAoIf2l9rp7Hu+4e21PuELpJJM5JA1KqkBVHjxO4b91RdjrdRgbR2xevCij2LZWMSDPDvET/mMeSe0evQJsNgR7Mhk2ptFzcXYGoscNpZvZSOHPxEnTq3YzuAFU/ZxY9oMdqbWuIhFGzCG2aRRFHpOCWUnfv4Di3E7sAQO36Xm1H7+GKQ25P8HvMRqV/HpJ35676y6bZmglLRYYwMVLrh0U5IO8bsHfvreX21Lva5MFgGt7I7pL11KtKvNLdNx043Z/bnsdgdnbeztxbwoNHxasEyHGCznmfpXeOeczOzjPBEzvtkdh/ahGwAuIyp/Em8fNeI+Wa0X/AJwtW4d44xnIiYjHma5x9p/ZdoJ0ltoNMDD2+7BIV881+EH0pjYVvtC4QQxLL3fD2sqgH6jx8hW4pS0axN71nPLreyb22uAWh0nHHC6CPPGDVh3A5Fh/MT++aouzuyFtICgYCVhku4yNWN27Iyo6ZrAttna93ePaW10rIhxJcpbCFU6721E+GDv+tee/xifq71+Wfby633bfiPzAP7YoYb8p+RH+aptlbLFhasEE9zJ7zEvqklfnjWwVfLIFZS7+02Vpvutts+U3OcaJWUBT1bQW3DjxFRp0XU34fQ/5xQ7zwPpn9qibFS4EK/emjaU727tSiDwAJJOOtTqBHfL19d1KDDqKOkmMdBQHihSe6H+zQ7vxNEKNUO0bW578SR+0o+DVj1q80nr9KL2vCgjRw451XdorVZojGZjHnmvHyxU2+hMiFVcoTzHKqWy2VPCjanEzciRg/wCKRMxOkxsMNtjs68ZUWjvI434wAR4g8BT2zO213G4hmXLDAIYaW9eFbfZcczA6ou7JPEkE+e6qjbP2erPN3onZSfeyNXp0rvXki3a7jbjzvRYW/bCMyLG8bBmwBgq3HyJrSaRjPCqDY/ZaC09sHLge++Pp0o59rxStoGpyN2lPdPma53mm/VukXz7LxJAThXBPTINOHPSsS+zGtZGmgSPv5AAIsnHmSOHnitXsqObSGnZS54qowq+A5mstpT4Iwc76TbQIgwgAHhT9JcLjJwPHhUCqYv7kxxlgjSEcEUbyem/cKYttowOxSOdGYcVV1Yj5ZqbhvA/SisdteZbeI3+0DqKb44F3pGTuAGdzP+Y/LFK2xtTZ1xHG0gW4cgNHbxuZWJPD2FON34juHWtVdQpIpSWMOp4qwDg+YNNWFjBCMQxRx55Iipn5ACgoewfZx7VZZJCVaZtQh1l1hXkgJO89SK1dChRBVje3XaK5geKCyMMlzId0DIzvjnISGAjUdWqx7TX95qW3s4TrkHtXMg/gwLzPV36LWc27cQ7EttUf8W9um0meY73b4pJW+GNc+6N3CirCO/ayQNfXLz3k4wlvANw/LBEMDA5yP6gVmn7L3QgafSrY9oxqwlm47xhMqz7+APWpMlhsqBddy42nfTD3Qe+eViM6YolJWNB1PAc6t/ss7GvYrNNKAklwQe4U5SFASVUn4n9rBPgBXHm6fj5c+fp6+k67m6Xf4pzfxlIdp3lnIJSrp3gBzIhGteQOoZz4biK2Oy+2wnGlrbXJjOEwQQOJwQStXvbDZD3Vm8Mb6HOGUngSpzpPgeFcu2f2K2iG09yRyLF1x654V5L05ODtx7MPr8XN03W13qIrW0e9z/HQbbtJbmURsskTEgDS5K5PAeycfStCYXHCU/zKrD/SFP1rDwdmmsYXuZGiZ40LDUSI4yODtwLgfKqmxv8AbW0ZO6EsVvbkAtc24xqQ8o2LFw56eyRxPQ+np7cs1/t8vl9dXpo5M6bvHufW/nt03Mw5Rt82j+mG/egLpucUg8QUYegbUfSqbbttfx2yR7PaNnXAaS6kd3IH8p1MepIxWJvvtA2pZSLDd2ttJI3urFL7bdcIrO3+kV6HhdF2rFbXELQ3C6o24rIrxjccggkDBB35Bqn2T9n2yo27yK1jduTO7z4xwxrZgKuuzu0Jp4Flmt2t2bf3TPrYDkW3DTnod/XHCpslsjbyik9SoJ9aBwDG6jpgWwHAuP52P0JI+lHpYfHn9Sg/tigdNRr+/jhjaSRwiIMsx3AAUiWdx8IPk2D6Ef3qtuJWbcUcfIMP9JNNMc7v+01ztifurVnt7JG9qYbnkx06eXr0roWxrYRgCMuBu1M7FteBxOefjRWezUHMDwxp+lTtpbGSeFoWZ1VhgmNyhx01Cs99Vkdv9rZrqY2Oy8NJwlufghHA4PAtWg7H9kobGMhcvK++SZ97u3PJ5Dwqd2e2BBZQiG3QKo4nizHqzczVpWkCio6FAVCjpEkgUEk4Aohu6dguVCk/mOBVFb7RuJ3KKFRQcFx7X9J6088j3TaVysI4twL+C+HjVtBCkSgDCgUBFxGmWbhzNRDeyvvji3dXOnPy407JtGPgMufyjVSPvErbkj0+Ln+woKqftRBGwSbVGW4FlIUnpq4Zq6iIIyp3Go3/AIYrENIA7DhkcPKpqrgbqKSWI5U1JdAVH2jesoOhNRAzvOlfWqPZHaQujm5jWMqSAqEyFgOYAGaCB2o7PXV5IDHdNGo+HGVPmOdXNlseWGJUTSz8DIQAB4hRxqVsHbVtdau4YkocMCrIVPQhgKuNJ6586Yai7O2cse8ks54ueJ/wKm0jWeY9N9KDg86ApZVUamYKBzJAHqaze0r61uGAAkusZxHEC0RP523J/Uaru0HYy6luPvEV7kj3YZ4w8S+SjHqcmk9pdq7Wt4o0htRKcDvZ4lXd+Lu4C2c9M5qoXb9k5FuPvkcVvFMV0IoB0QoeLEKB3j7vAcs86rNt2949zHHZbSnlmDjvgBH93hTi2rSu444KSSc/OrXs3bQ3yF5hfOVOGW6LRKTzAiTSjD5GtfZ2ccSBIkVEHBUUKB8hQOxggAE5ON56nrRkZo6YvpgkbFpFi3HDtpwvjvODUAnaNBlmCDqW0D6nFHE2oakkDA89zD5EYrl20bawmR44hJte8cEd6WZo4yfiMgxFCo3bl37qsOy3Z7aGz4BaWscZeQ97NdzMDBGxwO7hhVtbkAcTgE76Doeph8OfI/2OP3qv2xs21uUCXUCuqnI71MhT1D8B61gLXbW1V2ulmt1FeKNLT6YVRIUPvBmXerY4e0eW6uq0VV7E2LaW4P3WGGMHiY1XJ82G8+tWlMyWyMclVJ643+vGkG2x7ski/MOP9YJ9CKCTVZ2g29BZwNPO+lF6byx5Ko5k085mHDu3/qjPr7efQVGlkY7nicDmRiQeiksf6aDl0j3W2pFludUFgDqit1JDTY4Mx5/q/p/FWov+0Frs9Y1cYYACG1gXMjclAQbwD+bcT1Nai2SHPvLq6N7Lf0nBHpTGyOx9pb3D3McRM0m8ySO8rDPHSXJK58OgrOTrWxEdlPbWW0r/ANq5kNhbnhbwH/iHH/Vn/wDT8lGfKtJsTYFtaLpt4Ujz7zAZdzzLyHLMfM1Z0K0yFChQoCJrn3aj7SGs5O7ksJgzE92WkjAkAOMgKWPMbuO+rLtn21W1YW9uvf3km5IV36c8Gkxw8v7ZNV/Z/sstsW2jtSZXucai7kd3APwpyyOvp4xcXHZKe+mVprxIoUbfHAqkug6yOTx8MUxtPt5ZxO0ad7cSL7yW0TTaT0ZhuB+dVfaLbc+0rSSLZ0E5D7vvLaYUIz7QTWQxyOYFVnZztHLY91s3/wAOWK4I9kmVVjkP4y4BO/5mmo0GxvtJsridYCJYpGOAsseMnoSCcHzrZdyvTHlu/asbsfsSzXpv75kef4I4xiOLG4YJ3u2Cd59K21IDfd9Cf3/ehhuoPyxTlCqhGo/h9DQ7wc8j5UommJ72NfeYb+XM/KgeDjrTV1aJIMMMjpmnRgjOKIxjyoCSMAYXdVJtLYssjZ77dyUru/ffV3o6Gh7XhQVEKXaYGmJh1GVq3jJxv40NR6UO8oGycb6yd32zQXX3YBo24B5EYKx6IfirU4brmkMqn3lHpmiqAnvXKCQzMOO/TGvmBxqBsW1uRdSxh4SnEyKhypPwDJxnxqxPYy2M7TBplL+8qTOqNjqoNaC1tkjUKihQOQoGdm7NjhB0Dexyzc2J4kmpZqPf38cEZkldURd5ZjgCqGw7Vm7UtYwiVQcd5JIIkPXCgM/0FA/tHtMVDG3tprjRnUV0ogxx9tyNXyzQ7Ndp47u1+8uhgXLKe9KgeycEhuBG7jVR2vM8VnLPdyAxoufu9upQN+WSUksy9cBaqdmbU2YIY2kdL24cDu7dF7zSSNyRQ+6gHDUfmaDoGz9oQTAmCdJMcdDq4Hn0qZlh0P0rLdiOyotWmuGRI5bg5McfuRKPdjGOJ5k9Sa1lEN98OeR5j+/Clg54UmaZUUs7KqjeWYhQB1JPCqG07W7OmlEUd3C0jHACvjUeisNzHwzQH2xh2g8GnZ7wo595pM6sf9P2SoPiaw/ZbYtx95WLaGye/cnJvJrjv1GOLaXLKvgq48q6oY2HBvkwz9Rg0XesOKHzU6vocH0zRXPdgfaHHJtGaAtb2tnCCq94NDyurFSVOQqgY93BOMfKt29ja204PuLyyRQkC4mLuLYLkExxgEamI4445Fby77P7Onl1y2tu8p5yRKHbxIYAtV1BAqKERVRRuCqAoHkBuFAxsvZcFund28SRJnOlFC5PU44nxNS6FUvavtPBs+Dvp9WM4VVGWZunRfMkCgujWIu7ba13JJrmXZ1shONBSWaQD42kzpjXHQg1mrL7RZ75yqXVns5M4UyhppG6EM2mOpPaXYcUNt95vry92kp92KNtEDnjkrHlUX8xPrQV/YW6v5NqtHBey3VnC5Es0mWjddPurqJw+Tu0ngM8DXTNu9pbSzGbidEOMhM6pG/TGMsfSuX7F7cWskOh7k2MKA6bSyhZSwHI3eDlj+UIfGldluzQ2q/fNGtvYI/swq2uedhu1TzZLk9Sx8B+IwdG7Ldp4doxu0UcoRWKkyxgKxB+EhiG8uXPFXIskHujT+glB6KQD86VaWqRIscaqiIAqqowqgcAAKeqhnu3HB8/qUH/ALdNHrccVB/S2/0OP3p2s92g7Z2lo4jd2eY8IIVMsp/lHD50F53455HmCPrwpRwwIB48wd/yI4Vz8fa3bLKEntbu3B+KWNVwPxFdWrHjit6oRwGGCCAQeG48N9BUbB7JWtpJJLErGSQktJIxkffyDNvArMfa12YvbwRfdtLxxkloS2nU27S2/c2N+4kca6B3XRj+/wC9D2h0P0qYawGz9u7Z7tYl2VGjKAodp1WMY3Z0jJ+Qqw7O9jnFz99vpRNdEYUKMRwj8KDn5mtf3nUEfWlCQHnTDSqFChVQKFCq/adzIMLGhLN8Xwr4k0EfbdwhHd6dbtwUfuegpOxdiLF7b73Pz0+AqVs3ZojBZjqc+8x4n/Ap4XiMxjDe0OIoI818zOY4gCRxY8F/yfCkS7KLDLzSZ8G0j0FRotnyQMzLKuliSQw/vmkxfeJ2wxCx9V4t5dBQHsSOQSONbOg3Asc7+e+r+mreAIuAKcoBQoiaZNxg0DEbODgjNSKro7yRfeUMOq8fSpcN2jcDv6HcfSinDGP/AKoYYc8+f+aUfCozzsvEUCrhEdSsiAqeIYBlNUtj2JsYp/vEMCxyYIyhIXfz0A6c1fJOp54891KMQ4jd4jdQYzZewdrRSTA3lu0UkhcM8TySKD8KKWCrgY45FaHY3Z6G3ZpAC8z+/O+C7eAwAFX8qgCrLDDmD57j60O+A94FfPh6jdQO1GfaESyrCZUErAssZYa2A4kLxIqQp58q5nD2U2vb7QuLq3ls5PvBwXuO8LIgJKqqqPZwDjAODgUFl242nbJfWsM1nNcPISIgXCwF8jGVdtDN4kbqzW0lX/xRZHt45r1B/A2faY0xY4S3k+AuRnOMbt1M/aD3ti0U0s5mv59SpcFNMVnHkB/u8Q3B8H3j7WATV3sDbdjZw9xstHv7pxl2jDEyOd+u4nYYRc53Z3UDPbe52pb2jXM+0ord8gR2tvCCHYndGJWyzHHE4xurb9inumsIWvDmdly2QFbBOU1gbg2nGapdg9j5HuBfbTdZrkf8uJf+RajpGvxN+b9+NbWgS6AjBAI6EZHpTBslHuF0/Q24eSNlfpUmku2KCNiZeccg8QY2+bDUCfktA3mN0kbr/LrX5lM4H6sVJUk0qgzd52R2ZdHWbaBznJaPCk+DFCM+RrQxRBECooUKMKoGlQANwAHAUiW1RjllBPXHtDybiKIW5HuyMPBvbHqfa/1UGEt/s7a5vZLrabRSDhHDACkYXkXOAxI/feTwA2+yNlQ20QhgjWONeCjqeJJO9iep306HccVDeKnB/pbd9aULheeV/UCv1O4/KoHaFDNUXa7Z15PDotLlbdj7zFCWYfhV8+x54JqiftPbVtbjM88UQ/O6rn5E5NY207U7LikkextpJ5pDljbW7nWfGVgFA+dZPZ/Z3aWz5GkfZ0F9k5MpPeyDyZjq/wBJroO0O1LW2zTdy2vcvgYg1A+0dygkDdU0ZPtDatPIt9tjRbW0P/KtQweSQ8cORxJx7oopNv220hpuNoR2lucCO2jlVJWxwMzncB+UbupNbHs12ihvrJJ5xAud7IXVwmDz1AYPyrIdspo9qstnYRK4VgZLoKBHEAd6q/xHwFT9VOg7BXsIDWO1pdHECX+KuPA5x9K6DYROsarI/eOB7T4C6jzOBuFMbC2YLa2jgUkiNQuTzwMVPqxCTIURUHlR0KqEd0OW7yoaT19aiXd8wbRGhZvRR5tUG6kvFXV/CwPh3/vQXOo9PSh3g8qgbE2kZo9RXSc48N3Spss6L7zAeZoHNQNVl1sKN315ZW6qxGamo6NwIPkaXo6Ggiw7LReOpv1MW/epoGKT7VDX1FAqhRBxRg0CHjzTTW3jUihQVINBogeIFNK1PK1ZaGilfdY+R3inBdke8vzXePTjSRR1Q9CUfepB64/uKkCquW1Vt+MH8QJBHzG+ko86cGEg6Pub5OP7g00xbE0hJgTgH+1QYNrxs4icFHPwMNQPkRkeuKlvaqf95qoU1uucjKnqp0+vI/OiIkHAq48fZPqAQfQVFkEkYLZyBk44jrz5YHjSU2sATqHBS2VB4DiSD5HcCeHOgVe9xIum4iXT0mRWT+o5T65qXaW0cahYkRE5BFCr8gN1Og1GawTOVzGesZ07+pX3WPmDQSqKooEy81kHj/Df1GVY/JaFvtBGcx71kAyUYbwOuRlfrQSWbFEF5mlYFCgOhRUeaAxQoUKAUKFJK0CO4Xlu/ScfQUelhwIPmP7j/FEw37qdFQN94RxU/LfTN7awzxtFKqyIwwUYZB8walUTIDxFUZGP7Mdlh9X3UHwZ3Zf6ScVqbOzjiQJEioo4KoCgfIUvuuhI+tDLDofpUw05QpsTCnKqBUS42lEhwWGeg3n0FKvrXvFK62XPNeNUUOxJ4CWhkVs8Q44/OgtDtMn3IZD4kBR9aauIpZB/FIjTmqnJI8W5fKpGzZ5mB71FUjoc58agXdwJLjum90DJH4ug8qCOu0snu4lYRjdqVc/0/wCakWxtXbQRl/zg5/1VbNIiL0AHSqyC172YSkYA93qfE0C7TYgjlLocKR7o4edW9AUKA6FNSyYptbmgkFRRd3QRs0qgKiJoM1RZpaD/2Q==" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title ">
+                        <h2 class="mdl-card__title-text">Updates</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        The portfolio will be updated every week.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">
+                          
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Matthew Rau's Portfolio website</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>
