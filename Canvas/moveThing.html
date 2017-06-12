@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas Art</title>
+        <style>
+            canvas {
+              border:3px solid blue;background-color:white;
+            }
+            #darth {display: none;}
+        </style>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="400" height="400">
+        Your browser does not support the canvas element.
+        </canvas>
+       
+        
+        <script> 
+ 
+ 
+            
+            
+            var image = new Image();
+            image.src = "august.png";
+        
+                function  loadImage(e) {
+                    ctx.drawImage(image, 0, 0);
+                    
+                }
+        
+        
+            var moveCircle = function(e) {
+                console.log(e);
+                
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                
+                if (e.keyCode == 39) {
+                    circleX = circleX + 5;
+                    var circleColor = '#A8FF33'  //+ Math.floor(Math.random()*16777215).toString(16);
+                }
+                
+                if (e.keyCode == 37) {
+                    circleX = circleX - 5;
+                    var circleColor = '#DD33FF'  //+ Math.floor(Math.random()*16777215).toString(16);
+                }
+                 if (e.keyCode == 38) {
+                    circleY = circleY - 5;
+                    var circleColor = '	#FFFF00'  //+ Math.floor(Math.random()*16777215).toString(16);
+                }
+                
+                 if (e.keyCode == 40) {
+                    circleY = circleY + 5;
+                    var circleColor = '#800000' //+ Math.floor(Math.random()*16777215).toString(16);
+                }
+                
+                
+                ctx.beginPath();
+                ctx.arc(circleX,circleY,20,0,2*Math.PI);
+                ctx.fillStyle = circleColor;
+                ctx.fill();
+            }
+            
+           // document.addEventListener("load", )
+            document.addEventListener("keydown", moveCircle );
+
+</script>
+    </body>
+</html>

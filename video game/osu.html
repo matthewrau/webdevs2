@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Text Example</title>
+  <style>
+    canvas {
+      border: #333 10px solid;
+    }
+  </style>
+</head>
+ 
+<body>
+  <canvas id="myCanvas" width="990px" height="760px"></canvas>
+
+<style>
+  canvas {
+    background-image: url("ohioState.jpg");
+  }
+  
+</style>
+
+  <script>
+   var livesRemaining = 3;
+    var score = 0;
+    var level = 1;
+    var paused = false;
+    var canvas = document.querySelector("#myCanvas");
+    var context = canvas.getContext("2d");
+    var x = 100;
+    var y = 550;
+    var myImage = new Image();
+    var enemy = new Image();
+    var beer = new Image();
+    var enemyY =  250;
+    var enemyX = 600;
+    var beerX = 600;
+    var beerY = 600;
+    myImage.src = "august.png";
+    enemy.src = "enemy.png";
+    beer.src = "beer.png";
+  
+    myImage.addEventListener("load", loadImage, false);  
+    enemy.addEventListener("load", enemyImage, false);
+    beer.addEventListener("load", beerImage, false);
+
+    function loadImage(e) {
+      context.drawImage(myImage, x, y);
+    }
+
+    function enemyImage(e) {
+      context.drawImage(enemy, enemyX, enemyY);
+    }
+    function beerImage(e) {
+      context.drawImage(beer, beerX, beerY);
+    }
+
+    window.addEventListener("keydown", dealWithKeyboard, false);
+    window.addEventListener("keyup", dealWithKeyboard, false);
+
+      
+      function dealWithKeyboard(e) {
+        // gets called when any of the keyboard events are overheard
+        switch(e.keyCode) {
+          case 38:
+              if (y != 700)
+              {
+              y -= 10;
+              }
+              console.log("hit");
+              break;
+          case 40:
+            y 
+             if (y != 400) {
+              y += 10;
+             }
+            
+             
+              console.log("hit");
+
+              break;
+          case 37:
+             if (x != 60) {
+              x  -= 10
+             }
+      
+              console.log("hit");
+
+              break;
+          case 39:
+              
+              
+              
+              x += (0.1*((score*10)-1));
+          
+              
+              console.log("hit");
+
+        
+        }
+        e.preventDefault();
+        
+    }
+
+
+    function animate() {
+      
+      
+      
+      context.clearRect(0,0,canvas.width, canvas.height);
+      context.drawImage(myImage, x, y);
+    
+      context.font =  "bold 32px Green, Helvetica, Arial, sans-serif";
+      context.fillText(" Lives " + livesRemaining, 150, 50);
+      context.fillText( "GPA " + score, 300, 50);
+      context.fillText(" Level " + level, 500, 50);
+      
+     
+      
+       context.drawImage(enemy, enemyX, enemyY);
+          if   (enemyX <= 50) {
+              enemyX = 1000;
+              enemyY = Math.floor(Math.random()* 300) + 400;
+          }
+          else {
+            enemyX -= (3*level);
+          }
+      
+        context.drawImage(beer, beerX, beerY);
+          if   (beerX <= 50) {
+              beerX = 1000; // Math.floor(Math.random()*1000)
+              beerY = Math.floor(Math.random()* 300) + 400;
+          }
+          else {
+            beerX -= (1.5*level);
+          }
+      
+          if (beerX >= x && beerX <= x + myImage.width && beerY >= y && beerY <= y + myImage.height) {
+            score += 0.1
+            beerX = 1000
+            beerY = Math.floor(Math.random()* 300) + 400;
+          }
+          
+          if (enemyX >= x && enemyX <= x + myImage.width && enemyY >= y && enemyY <= y + myImage.height) {
+            livesRemaining -= 1
+            enemyX = 1000
+            enemyY = Math.floor(Math.random()* 300) + 200;
+          }
+          
+          if (score >= 0.5) {
+            level = score*2 + 1
+          }
+          
+          
+          if (livesRemaining <= 0) {
+            context.clearRect(0,0,canvas.width, canvas.height); 
+            $("canvas").css("background-image", url("dead.jpg"));
+          }
+          //if (x >= 900)
+            
+      
+      requestAnimationFrame(animate);
+      
+      
+      
+      
+      
+    }
+    animate();
+    
+  </script>
+  <script>
+     //var c = document.getElementById("myCanvas");
+      //var ctx = c.getContext("2d");
+      //var x = 500, y = 100;
+    
+      
+  //    function animate() {
+    //    ctx.clearRect(0,0,c.width, c.height);
+      //  x -= 1.5;
+      
+      
+            
+       //ctx.beginPath();
+        //ctx.fillStyle = "red";
+        //ctx.arc(x,y,20, 0, Math.PI*2);
+        //ctx.fill();
+       
+
+      //   requestAnimationFrame(animate);
+      // }
+      // animate();       
+  
+    
+    
+    
+  </script>
+  
+  
+ 
+</body>
+ 
+</html>
+      
+
+
+
+    
+
+
+
+
+
+
+  

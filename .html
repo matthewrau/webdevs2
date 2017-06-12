@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Text Example</title>
+  <style>
+    canvas {
+      border: #333 10px solid;
+    }
+  </style>
+</head>
+ 
+<body>
+  <canvas id="myCanvas" width="1500px" height="800px"></canvas>
+ 
+  <script>
+    var canvas = document.querySelector("#myCanvas");
+    var context = canvas.getContext("2d");
+    var x = 100
+    var y = 0
+    var myImage = new Image();
+    myImage.src = "enemy.png";
+    
+    myImage.addEventListener("load", loadImage, false);
+ 
+    function loadImage(e) {
+      context.drawImage(myImage, x, y);
+    }
+    
+    window.addEventListener("keydown", dealWithKeyboard, false);
+    window.addEventListener("keyup", dealWithKeyboard, false);
+     
+    function dealWithKeyboard(e) {
+        // gets called when any of the keyboard events are overheard
+        switch(e.keyCode) {
+          case 38:
+              y -= 10;
+              break;
+          case 40:
+              y += 10;
+              break;
+        
+        }
+        e.preventDefault();
+        animate();
+    }
+    
+    function animate() {
+      context.clearRect(0,0,canvas.width, canvas.height);
+      context.drawImage(myImage, x, y);
+      
+      //requestAnimationFrame(animate);
+    }
+    //animate();
+    
+  </script>
+ 
+</body>
+ 
+</html>
